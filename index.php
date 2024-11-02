@@ -43,7 +43,6 @@
 </html>
 
 <style>
-    /* Estilos personalizados para borde y sombra */
     body {
         background-color: #f0f0f0;
     }

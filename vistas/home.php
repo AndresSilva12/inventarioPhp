@@ -2,3 +2,4 @@
 	<h1 class="title">Home</h1>
 	<h2 class="subtitle">¡Bienvenido <?php echo $_SESSION['nombre']." ".$_SESSION['apellido']; ?>!</h2>
 </div>
+<?php include "./inc/product_list.php"; ?>

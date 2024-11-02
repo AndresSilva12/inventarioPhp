@@ -1,9 +1,8 @@
-<div class="container is-fluid mb-6">
-	<h1 class="title">Categorías</h1>
-	<h2 class="subtitle">Actualizar categoría</h2>
-</div>
-
-<div class="container pb-6 pt-6">
+<div class="container is-flex is-flex-direction-row is-justify-content-space-between">
+	<div class="is-flex-direction-column">
+		<h1 class="title">Categorías</h1>
+		<h2 class="subtitle">Actualizar categoría</h2>
+	</div>
 	<?php
 		include "./inc/btn_back.php";
 
@@ -19,6 +18,9 @@
         if($check_categoria->rowCount()>0){
         	$datos=$check_categoria->fetch();
 	?>
+</div>
+
+<div class="container pb-6 pt-6">
 
 	<div class="form-rest mb-6 mt-6"></div>
 

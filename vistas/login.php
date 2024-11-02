@@ -17,7 +17,7 @@
 		  	</div>
 		</div>
 
-		<div class="is-flex is-justify-content-space-around is-align-items-center	is-flex-direction-row">
+		<div class="is-flex is-justify-content-space-around is-align-items-center is-flex-direction-row">
 			<p class="has-text-centered mb-4 mt-3 has-background-primary-light">
 				<a href="index.php?vista=register" class="is-info is-rounded has-background-inherit	">Registrarse</a>
 			</p>

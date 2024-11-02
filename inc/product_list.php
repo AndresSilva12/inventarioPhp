@@ -1,6 +1,5 @@
-<div class="container is-fluid mb-6">
-    <h1 class="title">Productos</h1>
-    <h2 class="subtitle">Lista de productos</h2>
+<div class="container is-fluid mb-4 mt-6">
+    <h1 class="title">Lista de productos</h1>
 </div>
 
 <div class="container p-6 has-background-white card">

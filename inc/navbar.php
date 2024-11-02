@@ -6,7 +6,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : null;
 <nav class="navbar is-primary navbar-custom" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" id="icono-navBar" href="index.php?vista=home">
-            <img src="./img/icono.png" width="60" height="100">
+            <img src="./img/icono.png" width="50" height="100">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">

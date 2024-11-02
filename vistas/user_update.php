@@ -4,17 +4,18 @@
     $id = (isset($_GET['user_id_up'])) ? $_GET['user_id_up'] : 0;
     $id=limpiar_cadena($id);
 ?>
-<div class="container is-fluid mb-6">
+<div class="container is-flex is-flex-direction-row is-justify-content-space-between">
 	<?php if($id==$_SESSION['id']){ ?>
-		<h1 class="title">Mi cuenta</h1>
-		<h2 class="subtitle">Actualizar datos de cuenta</h2>
-	<?php }else{ ?>
-		<h1 class="title">Usuarios</h1>
-		<h2 class="subtitle">Actualizar usuario</h2>
+		<div class="is-flex-direction-column">
+			<h1 class="title">Mi cuenta</h1>
+			<h2 class="subtitle">Actualizar datos de cuenta</h2>
+		</div>
+			<?php }else{ ?>
+		<div class="is-flex-direction-column">
+			<h1 class="title">Usuarios</h1>
+			<h2 class="subtitle">Actualizar usuario</h2>
+		</div>
 	<?php } ?>
-</div>
-
-<div class="container pb-6 pt-6">
 	<?php
 
 		include "./inc/btn_back.php";
@@ -26,8 +27,9 @@
         if($check_usuario->rowCount()>0){
         	$datos=$check_usuario->fetch();
 	?>
+</div>
 
-	<div class="form-rest mb-6 mt-6"></div>
+<div class="container p-4 has-background-white card">
 
 	<form action="./php/usuario_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off" >
 
@@ -61,11 +63,10 @@
 				</div>
 		  	</div>
 		</div>
-		<br><br>
+		
 		<p class="has-text-centered">
 			SI desea actualizar la clave de este usuario por favor llene los 2 campos. Si NO desea actualizar la clave deje los campos vacíos.
 		</p>
-		<br>
 		<div class="columns">
 			<div class="column">
 		    	<div class="control">
@@ -80,7 +81,7 @@
 				</div>
 		  	</div>
 		</div>
-		<br><br><br>
+		<br>
 		<p class="has-text-centered">
 			Para poder actualizar los datos de este usuario por favor ingrese su USUARIO y CLAVE con la que ha iniciado sesión
 		</p>

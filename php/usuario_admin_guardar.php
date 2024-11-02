@@ -139,10 +139,14 @@
 
     $guardar_usuario->execute($marcadores);
 
-    if($guardar_usuario->rowCount()==1){
-        header("Location: index.php?vista=home");
-        exit();
-    }else{
+    if($guardar_usuario->rowCount() == 1) {
+        echo '
+            <div class="notification is-success is-light">
+                <strong>¡Registro exitoso!</strong><br>
+                El usuario ha sido registrado correctamente.
+            </div>
+        ';
+    } else {
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>

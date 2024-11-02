@@ -1,9 +1,9 @@
-<div class="container is-fluid mb-6">
-	<h1 class="title">Productos</h1>
-	<h2 class="subtitle">Actualizar producto</h2>
-</div>
+<div class="container is-flex is-flex-direction-row is-justify-content-space-between">
+	<div class="is-flex-direction-column">
+		<h1 class="title">Productos</h1>
+		<h2 class="subtitle">Actualizar producto</h2>
+	</div>
 
-<div class="container pb-6 pt-6">
 	<?php
 		include "./inc/btn_back.php";
 
@@ -19,6 +19,9 @@
         if($check_producto->rowCount()>0){
         	$datos=$check_producto->fetch();
 	?>
+</div>
+
+<div class="container pb-6 pt-6">
 
 	<div class="form-rest mb-6 mt-6"></div>
 	
