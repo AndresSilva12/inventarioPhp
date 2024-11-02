@@ -7,9 +7,9 @@
 	}
 	
 	$conexion = conexion();
-	if ($conexion) {
-		echo "Conexión exitosa";
-	}
+	// if ($conexion) {
+	// 	echo "Conexión exitosa";
+	// }
 
 
 

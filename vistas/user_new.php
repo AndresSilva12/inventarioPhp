@@ -2,11 +2,11 @@
 	<h1 class="title">Usuarios</h1>
 	<h2 class="subtitle">Nuevo usuario</h2>
 </div>
-<div class="container pb-6 pt-6">
+<div class="container p-6 has-background-white card">
 
 	<div class="form-rest mb-6 mt-6"></div>
 
-	<form action="./php/usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off" >
+	<form action="./php/usuario_admin_guardar.php" method="POST" class="FormularioAjax" autocomplete="off" >
 		<div class="columns">
 		  	<div class="column">
 		    	<div class="control">

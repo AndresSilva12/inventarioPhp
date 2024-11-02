@@ -37,36 +37,69 @@
 	if($total>=1 && $pagina<=$Npaginas){
 		$contador=$inicio+1;
 		$pag_inicio=$inicio+1;
-		foreach($datos as $rows){
-			$tabla.='
-				<article class="media">
-			        <figure class="media-left">
-			            <p class="image is-64x64">';
-			            if(is_file("./img/producto/".$rows['producto_foto'])){
-			            	$tabla.='<img src="./img/producto/'.$rows['producto_foto'].'">';
-			            }else{
-			            	$tabla.='<img src="./img/producto.png">';
-			            }
-			   $tabla.='</p>
-			        </figure>
-			        <div class="media-content">
-			            <div class="content">
-			              <p>
-			                <strong>'.$contador.' - '.$rows['producto_nombre'].'</strong><br>
-			                <strong>CODIGO:</strong> '.$rows['producto_codigo'].', <strong>PRECIO:</strong> $'.$rows['producto_precio'].', <strong>STOCK:</strong> '.$rows['producto_stock'].', <strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
-			              </p>
-			            </div>
-			            <div class="has-text-right">
-			                <a href="index.php?vista=product_img&product_id_up='.$rows['producto_id'].'" class="button is-link is-rounded is-small">Imagen</a>
-			                <a href="index.php?vista=product_update&product_id_up='.$rows['producto_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
-			                <a href="'.$url.$pagina.'&product_id_del='.$rows['producto_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
-			            </div>
-			        </div>
-			    </article>
+		if ($rol == 'admin') {
+			foreach($datos as $rows){
+				$tabla.='
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">';
+							if(is_file("./img/producto/".$rows['producto_foto'])){
+								$tabla.='<img src="./img/producto/'.$rows['producto_foto'].'">';
+							}else{
+								$tabla.='<img src="./img/producto.png">';
+							}
+				$tabla.='</p>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+							<p>
+								<strong>'.$contador.' - '.$rows['producto_nombre'].'</strong><br>
+								<strong>CODIGO:</strong> '.$rows['producto_codigo'].', <strong>PRECIO:</strong> $'.$rows['producto_precio'].', <strong>STOCK:</strong> '.$rows['producto_stock'].', <strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
+							</p>
+							</div>
+							<div class="has-text-right">
+								<a href="index.php?vista=product_img&product_id_up='.$rows['producto_id'].'" class="button is-link is-rounded is-small">Imagen</a>
+								<a href="index.php?vista=product_update&product_id_up='.$rows['producto_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
+								<a href="'.$url.$pagina.'&product_id_del='.$rows['producto_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
+							</div>
+						</div>
+					</article>
 
-			    <hr>
-            ';
-            $contador++;
+					<hr>
+				';
+				$contador++;
+			}
+		}
+		else {
+			foreach($datos as $rows){
+				$tabla.='
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">';
+							if(is_file("./img/producto/".$rows['producto_foto'])){
+								$tabla.='<img src="./img/producto/'.$rows['producto_foto'].'">';
+							}else{
+								$tabla.='<img src="./img/producto.png">';
+							}
+				$tabla.='</p>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+							<p>
+								<strong>'.$contador.' - '.$rows['producto_nombre'].'</strong><br>
+								<strong>CODIGO:</strong> '.$rows['producto_codigo'].', <strong>PRECIO:</strong> $'.$rows['producto_precio'].', <strong>STOCK:</strong> '.$rows['producto_stock'].', <strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
+							</p>
+							</div>
+							<div class="has-text-right">
+								<a href="index.php?vista=product_img&product_id_up='.$rows['producto_id'].'" class="button is-link is-rounded is-small">Imagen</a>
+							</div>
+						</div>
+					</article>
+
+					<hr>
+				';
+				$contador++;
+			}
 		}
 		$pag_final=$contador-1;
 	}else{

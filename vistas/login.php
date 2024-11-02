@@ -17,9 +17,15 @@
 		  	</div>
 		</div>
 
-		<p class="has-text-centered mb-4 mt-3">
-			<button type="submit" class="button is-info is-rounded">Iniciar sesion</button>
-		</p>
+		<div class="is-flex is-justify-content-space-around is-align-items-center	is-flex-direction-row">
+			<p class="has-text-centered mb-4 mt-3 has-background-primary-light">
+				<a href="index.php?vista=register" class="is-info is-rounded has-background-inherit	">Registrarse</a>
+			</p>
+			
+			<p class="has-text-centered mb-4 mt-3">
+				<button type="submit" class="button is-info is-rounded">Iniciar sesion</button>
+			</p>
+		</div>
 
 		<?php
 			if(isset($_POST['login_usuario']) && isset($_POST['login_clave'])){

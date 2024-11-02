@@ -12,7 +12,7 @@
             }
 
 
-            if(is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="login" && $_GET['vista']!="404"){
+            if(is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="login" && $_GET['vista']!="404" && $_GET['vista']!="register"){
 
                 /*== Cerrar sesion ==*/
                 if((!isset($_SESSION['id']) || $_SESSION['id']=="") || (!isset($_SESSION['usuario']) || $_SESSION['usuario']=="")){
@@ -31,10 +31,20 @@
             }else{
                 if($_GET['vista']=="login"){
                     include "./vistas/login.php";
-                }else{
+                }elseif ($_GET['vista']=="register") {
+                    include "./vistas/register.php";
+                }
+                else{
                     include "./vistas/404.php";
                 }
             }
         ?>
     </body>
 </html>
+
+<style>
+    /* Estilos personalizados para borde y sombra */
+    body {
+        background-color: #f0f0f0;
+    }
+</style>

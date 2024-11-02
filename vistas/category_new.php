@@ -3,7 +3,7 @@
 	<h2 class="subtitle">Nueva categoría</h2>
 </div>
 
-<div class="container pb-6 pt-6">
+<div class="container p-6 has-background-white card">
 
 	<div class="form-rest mb-6 mt-6"></div>
 

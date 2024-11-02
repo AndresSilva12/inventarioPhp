@@ -50,6 +50,8 @@
     		$_SESSION['nombre']=$check_user['usuario_nombre'];
     		$_SESSION['apellido']=$check_user['usuario_apellido'];
     		$_SESSION['usuario']=$check_user['usuario_usuario'];
+    		$_SESSION['rol']=$check_user['usuario_rol'];
+
 
     		if(headers_sent()){
 				echo "<script> window.location.href='index.php?vista=home'; </script>";
